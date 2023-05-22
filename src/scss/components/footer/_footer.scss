@@ -1,0 +1,123 @@
+.footer {
+  &__top {
+    @include flex($jc: space-between, $ai: flex-start);
+  }
+
+  &__bottom {
+    background-color: var(--background-footer);
+  }
+
+  &__title {
+    @include font($fw: 700, $fs: 14px, $lh: 1.4);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--background-separator);
+    padding: 20px 0;
+
+    @include media-lg {
+      font-size: 16px;
+      line-height: 4.94;
+    }
+  }
+
+  &__info {
+    @include flex($fd: column, $jc: center);
+    @include font($fw: 400, $fs: 12px, $lh: 1.71);
+    padding: 26px 0;
+
+    @include media-md {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include media-lg {
+      font-size: 14px;
+    }
+  }
+
+  &__contact {
+    @include flex($fd: column, $ai: flex-start);
+    margin-bottom: 50px;
+
+    @include media-sm {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: var(--light-color);
+  }
+
+  &__main {
+    @include font(
+      $fw: 700,
+      $fs: 30px,
+      $lh: 0.9,
+      $ls: -1.5px,
+      $c: var(--light-color)
+    );
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    @include media-sm {
+      font-size: 40px;
+    }
+  }
+
+  &__img {
+    display: none;
+    position: relative;
+
+    @include media-sm {
+      display: block;
+
+      &::before {
+        content: "";
+        @include absolute($t: 85px, $r: -69px);
+        background-image: url(../../../img/star_yellow.svg);
+        background-repeat: no-repeat;
+        width: 138px;
+        height: 138px;
+      }
+
+      &::after {
+        content: "";
+        @include absolute($b: 115px, $l: -21px);
+        background-image: url(../../../img/star_yellow_min.svg);
+        background-repeat: no-repeat;
+        width: 88px;
+        height: 88px;
+      }
+    }
+
+    &-wrap {
+      @include media-sm {
+        display: block;
+
+        &::before {
+          content: "";
+          @include absolute($b: 70px, $r: -44px);
+          background-image: url(../../../img/styk.png);
+          background-repeat: no-repeat;
+          width: 171px;
+          height: 169px;
+        }
+
+        &::after {
+          content: "Ждём тебя на чемпионате!";
+          @include absolute($b: 0, $r: -84px);
+          width: 171px;
+          height: 169px;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: -0.5px;
+          color: #000000;
+        }
+      }
+    }
+  }
+}

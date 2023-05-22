@@ -1,0 +1,165 @@
+.card {
+  &__icon {
+    width: 154px;
+    height: 154px;
+    @include flex($jc: center, $ai: center);
+    margin-top: -20px;
+    margin-right: -20px;
+    flex-shrink: 0;
+
+    img {
+      object-fit: none;
+      width: fit-content;
+    }
+
+    &--sm {
+      width: 56px;
+      height: 56px;
+      margin: 0;
+    }
+
+    // &--exp {
+    //   background: transparent;
+    //   box-shadow: none;
+    //   border-radius: 0;
+    //   object-fit: cover;
+    //   height: 60px;
+    //   width: auto;
+    // }
+
+    // &--sm {
+    //   width: 24px;
+    //   height: 24px;
+    //   background: transparent;
+    //   box-shadow: none;
+    //   border-radius: 0;
+    //   object-fit: cover;
+    // }
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__number {
+    @include font($fw: 400, $fs: 18px, $lh: 1.4);
+    margin-bottom: 16px;
+
+    // &--light {
+    // color: $c-gray-secondary;
+    // }
+  }
+
+  &__date {
+    @include font($fw: 400, $fs: 14px, $lh: 1.4);
+  }
+
+  &__title {
+    @include font($fw: 700, $fs: 28px, $lh: 1, $ls: -1.5px);
+    max-width: 412px;
+    margin: 0 0 22px;
+
+    @include media-md {
+      font-size: 48px;
+    }
+
+    &--sm {
+      @include font($fs: 22px, $lh: 1.09);
+      max-width: 224px;
+
+      @include media-md {
+        font-size: 32px;
+      }
+    }
+
+    &--num {
+      @include font($fs: 52px, $lh: 0.9, $ls: -3px);
+
+      @include media-md {
+        font-size: 72px;
+      }
+    }
+  }
+
+  &__text {
+    @include font($fw: 700, $fs: 16px, $lh: 1.57);
+    max-width: 538px;
+
+    @include media-md {
+      font-size: 22px;
+
+      // &--lg {
+      //   font-size: 24px;
+      // }
+    }
+    &--lg {
+      @include font(
+        $fw: 400,
+        $fs: 32px,
+        $lh: 1.06,
+        $ls: 0.5px,
+        $c: var(--gray-color)
+      );
+    }
+
+    &--sm {
+      @include font($fw: 400, $fs: 16px, $lh: 1.69, $ls: 0.5px);
+
+      // @include media-md {
+      //   font-size: 18px;
+
+      //   &--lg {
+      //     font-size: 24px;
+      //   }
+      // }
+    }
+
+    &--mb70 {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__desc {
+    @include font(
+      $fw: 400,
+      $fs: 32px,
+      $lh: 1.06,
+      $ls: 0.5px,
+      $c: var(--background-yellow-btn)
+    );
+  }
+
+  &__company {
+    @include font($fs: 16px, $lh: 1.4, $fw: 400);
+
+    // @include media-md {
+    //   font-size: 18px;
+    // }
+  }
+
+  &__wrap {
+    @include flex($fd: column, $ai: flex-start);
+    height: 100%;
+    width: 100%;
+  }
+
+  &__images {
+    @include flex();
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      flex-wrap: wrap;
+    }
+
+    margin-bottom: 51px;
+    picture {
+      &:not(:first-child) {
+        margin-left: -49px;
+
+        @include media-xl {
+          margin-left: -36px;
+        }
+      }
+    }
+  }
+}

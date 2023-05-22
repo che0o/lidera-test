@@ -1,0 +1,54 @@
+.btn {
+  @include relative;
+  @include flex($jc: center, $fs: 0);
+  display: inline-flex;
+  @include font($fs: 22px, $lh: 1.32, $fw: 700);
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  white-space: normal;
+  text-align: center;
+  cursor: pointer;
+  transition: color $t-std, background-color $t-std;
+
+  // @include media-lg {
+  //   white-space: nowrap;
+  // }
+
+  &__up {
+    @include fixed($b: 140px, $r: 20px);
+    // @include invisible();
+    z-index: 1;
+
+    // @include media-lg {
+    //   @include fixed($r: 24px);
+    // }
+
+    // &.show {
+    // @include visible();
+    // }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  // svg path {
+  // transition: fill $t-std;
+  // }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+    // box-shadow: 0 0 0 2px $sh-light-blue;
+  }
+}

@@ -1,0 +1,41 @@
+.btn {
+  &--md {
+    padding: 14px 35px;
+    max-height: 54px;
+    border-radius: 10px;
+    min-width: 218px;
+  }
+
+  &--lg {
+    @include font($fs: 20px, $lh: 1.55, $ls: 1px);
+    padding: 23px;
+    max-height: 77px;
+    border-radius: 100px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  // &--sm {
+  //   max-height: 36px;
+  //   padding: 8px 16px;
+  //   border-radius: 300px;
+  // }
+
+  // &--xs {
+  //   max-width: 80px;
+  //   max-height: 48px;
+  //   justify-content: center;
+  //   padding: 24px;
+  //   border-radius: 300px;
+  // }
+
+  // &--wide {
+  //   @include flex($jc: space-between);
+  //   flex-wrap: nowrap;
+  //   width: 100%;
+  // }
+
+  // &--circle {
+  //   border-radius: 50%;
+  // }
+}

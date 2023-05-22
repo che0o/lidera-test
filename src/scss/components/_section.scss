@@ -1,0 +1,140 @@
+.section {
+  padding-top: 88px;
+  padding-bottom: 88px;
+
+  &--first {
+    padding: 124px 0 0;
+
+    @include media-md {
+      padding: 214px 0 85px;
+    }
+  }
+
+  &--pb264 {
+    padding-bottom: 264px;
+  }
+
+  &--pb146 {
+    padding-bottom: 146px;
+  }
+
+  &--pt85 {
+    padding-top: 85px;
+  }
+
+  &--pb65 {
+    padding-bottom: 65px;
+  }
+
+  &--pt0 {
+    padding-top: 0;
+  }
+
+  &__top {
+    margin-bottom: 35px;
+
+    &-wrap {
+      @include flex($jc: space-between, $ai: baseline);
+
+      @include media-xs {
+        align-items: center;
+      }
+    }
+
+    &--bt {
+      border-top: 1px solid var(--background-separator);
+    }
+
+    &--bb {
+      border-bottom: 1px solid var(--background-separator);
+    }
+
+    &--pt {
+      padding-top: 36px;
+    }
+
+    &--center {
+      @include flex($fd: column, $ai: center);
+    }
+
+    &--row {
+      @include flex($ai: flex-start);
+    }
+
+    img {
+      display: none;
+    }
+
+    @include media-sm {
+      img {
+        display: block;
+      }
+    }
+  }
+
+  &__bottom {
+    @include flex($jc: center);
+    margin-top: 56px;
+  }
+
+  &__title {
+    @include flex($ai: center, $jc: center);
+    @include font($fw: 700, $fs: 38px, $lh: 0.9);
+    text-align: center;
+    margin: 36px 0;
+
+    @include media-xs {
+      font-size: 48px;
+    }
+
+    @include media-sm {
+      font-size: 58px;
+    }
+
+    @include media-md {
+      font-size: 68px;
+    }
+
+    @include media-lg {
+      font-size: 78px;
+    }
+
+    &--xl {
+      font-weight: 400;
+      font-size: 40px;
+      letter-spacing: -2.5px;
+      justify-content: flex-start;
+
+      @include media-xs {
+        font-size: 80px;
+      }
+
+      @include media-sm {
+        font-size: 90px;
+      }
+
+      @include media-md {
+        font-size: 110px;
+      }
+
+      @include media-lg {
+        font-size: 147px;
+        line-height: 110px;
+        letter-spacing: -6.5px;
+      }
+    }
+
+    &--mb {
+      margin-top: 0;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__btn-wrap {
+    width: 532px;
+
+    &--lg {
+      width: 924px;
+    }
+  }
+}

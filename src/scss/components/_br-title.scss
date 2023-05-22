@@ -1,0 +1,13 @@
+.br-title {
+  @include flex($ai: center, $jc: center, $fs: 0);
+  @include font($fw: 400, $fs: 16px, $lh: 1.55);
+  border: 1px solid var(--light-color);
+  border-radius: 30px;
+  width: fit-content;
+  padding: 8px 16px;
+
+  @include media-md {
+    padding: 12px 26px;
+    font-size: 18px;
+  }
+}

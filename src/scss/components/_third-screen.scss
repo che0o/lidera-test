@@ -1,0 +1,14 @@
+.third-screen {
+  position: relative;
+
+  @include media-md {
+    &::before {
+      content: "";
+      @include absolute($b: -128px, $r: -110px);
+      background-image: url(../../img/circle_rotate.svg);
+      background-repeat: no-repeat;
+      width: 529px;
+      height: 512px;
+    }
+  }
+}

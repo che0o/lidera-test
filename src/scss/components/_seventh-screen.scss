@@ -1,0 +1,11 @@
+.seventh-screen {
+  padding: 0 0 68px;
+
+  @include media-sm {
+    padding: 40px 0 68px;
+  }
+
+  @include media-lg {
+    padding: 90px 0 68px;
+  }
+}

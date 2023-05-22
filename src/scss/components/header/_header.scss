@@ -1,0 +1,18 @@
+.header {
+  @include fixed($t: 0, $r: 0, $l: 0);
+  background-color: var(--background-heder);
+  padding: 18px 0 23px;
+  z-index: 10;
+
+  &__wrapper {
+    @include flex($jc: space-between);
+  }
+
+  &__btn {
+    display: none;
+
+    @include media-lg {
+      display: block;
+    }
+  }
+}

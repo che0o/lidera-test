@@ -1,0 +1,40 @@
+.message {
+  @include flex($fd: column);
+  padding-top: 34px;
+
+  // &:nth-child(1) {
+  //   align-items: flex-start;
+  // }
+
+  &__item {
+    @include flex($jc: center);
+    width: 80%;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+
+  &__text {
+    padding: 16px 40px;
+    background-color: var(--blue-color);
+    border-radius: 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      @include absolute($r: -7px, $b: -14px);
+      border: 10px solid transparent;
+      border-top: 20px solid var(--blue-color);
+      transform: rotate(-40deg);
+    }
+  }
+}

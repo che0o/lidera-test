@@ -1,0 +1,22 @@
+.tags {
+  @include flex($fw: wrap);
+  max-width: 392px;
+  margin: 0 -4px 20px;
+
+  @include media-md {
+    margin-bottom: 0;
+  }
+}
+
+.tag {
+  @include flex($jc: center);
+  @include font($fw: 400, $fs: 20px, $lh: 1.4, $ls: 0.5px);
+  white-space: nowrap;
+  background: var(--blue-color);
+  border-radius: 30px;
+  padding: 16px 10px;
+  max-height: 52px;
+  margin: 0 4px 8px;
+  flex: 1 0 0;
+  width: fit-content;
+}

@@ -1,0 +1,59 @@
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-brand);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  @include media-lg {
+    position: initial;
+    z-index: 0;
+    overflow: auto;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+    margin-left: 150px;
+  }
+
+  &__list {
+    @include flex($fd: column, $jc: center);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__link {
+    @include font($fw: 700, $fs: 22px, $lh: 1.41, $c: var(--light-color));
+  }
+
+  @include media-lg {
+    &__list {
+      @include flex($fd: row);
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 100px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.menu--active {
+  opacity: 1;
+  visibility: visible;
+}

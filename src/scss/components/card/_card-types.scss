@@ -1,0 +1,98 @@
+.card {
+  &--light {
+    background-color: var(--light-color);
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+  }
+  &--blue {
+    background-color: var(--blue-color);
+  }
+
+  &--purple {
+    background-color: var(--purple-color);
+  }
+
+  &--large {
+    position: relative;
+    padding-bottom: 74px;
+
+    @include media-md {
+      padding: 44px 50px 74px;
+    }
+
+    .card__content {
+      @include flex($fd: column);
+
+      @include media-lg {
+        flex-direction: row;
+      }
+
+      @include media-md {
+        &::before {
+          content: "";
+          @include absolute($b: -84px, $r: -100px);
+          background-image: url(./../../../img/rub.png);
+          background-repeat: no-repeat;
+          width: 207px;
+          height: 206px;
+        }
+      }
+    }
+
+    .card__wrap {
+      &:first-child {
+        margin-bottom: 20px;
+      }
+
+      @include media-lg {
+        &:first-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card__text {
+      max-width: 100%;
+    }
+
+    @include media-md {
+      &::before {
+        content: "";
+        @include absolute($t: -29px, $r: -29px);
+        background-image: url(./../../../img/star_white.svg);
+        background-repeat: no-repeat;
+        width: 82px;
+        height: 82px;
+      }
+
+      &::after {
+        content: "";
+        @include absolute($b: -36px, $l: -36px);
+        background-image: url(./../../../img/star_yellow.svg);
+        background-repeat: no-repeat;
+        width: 98px;
+        height: 98px;
+      }
+    }
+  }
+
+  &--info {
+    padding-bottom: 67px;
+  }
+
+  &--partner {
+    justify-content: center;
+  }
+
+  &--photo {
+    text-align: center;
+  }
+
+  &--p10 {
+    padding: 10px;
+  }
+
+  &--p0 {
+    padding: 0;
+  }
+}

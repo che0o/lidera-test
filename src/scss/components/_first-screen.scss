@@ -1,0 +1,84 @@
+.first-screen {
+  @include flex($jc: center);
+  position: relative;
+
+  @include media-md {
+    justify-content: space-between;
+  }
+
+  &__content {
+    @include flex($fd: column, $ai: center);
+
+    @include media-md {
+      display: block;
+    }
+  }
+
+  &__title {
+    @include font($fw: 700, $fs: 44px, $lh: 1.08, $ls: -3px);
+    margin: 0 0 74px;
+    position: relative;
+    max-width: 300px;
+
+    @include media-md {
+      font-size: 65px;
+      max-width: 500px;
+    }
+
+    &::before {
+      content: "";
+      @include absolute($b: -67px, $r: 75px);
+      background-image: url(./../../../img/rub.png);
+      background-repeat: no-repeat;
+      width: 141px;
+      height: 159px;
+      z-index: -1;
+
+      @include media-md {
+        right: 217px;
+        bottom: -52px;
+      }
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include media-md {
+      display: block;
+    }
+
+    @include absolute($t: -62px, $r: -86px);
+
+    &-wrap {
+      position: relative;
+
+      &::before {
+        content: "";
+        @include absolute($t: 16px, $l: -48px);
+        background-image: url(./../../../img/star_yellow.svg);
+        background-repeat: no-repeat;
+        width: 98px;
+        height: 98px;
+      }
+    }
+  }
+
+  &__bottom {
+    @include flex($fd: column);
+
+    @include media-md {
+      flex-direction: row;
+    }
+  }
+
+  &__desc {
+    @include font($fw: 700, $fs: 33px, $lh: 0.91, $ls: -0.025em);
+    max-width: 372px;
+    z-index: 1;
+
+    @include media-md {
+      margin-left: 106px;
+    }
+  }
+}

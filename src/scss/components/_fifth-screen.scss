@@ -1,0 +1,70 @@
+.fifth-screen {
+  position: relative;
+
+  &__wrap {
+    position: relative;
+
+    @include media-md {
+      &::before {
+        content: "";
+        @include absolute($t: -126px, $l: -134px);
+        background-image: url(../../img/circle_rotatate2.svg);
+        background-repeat: no-repeat;
+        width: 463px;
+        height: 516px;
+      }
+
+      &::after {
+        content: "";
+        @include absolute($b: -94px, $r: -69px);
+        background-image: url(../../img/circle_rotatate3.svg);
+        background-repeat: no-repeat;
+        width: 482px;
+        height: 490px;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 52px;
+  }
+  &__title {
+    @include font($fw: 700, $fs: 25px, $lh: 1.34);
+    width: 90%;
+    text-align: center;
+
+    @include media-md {
+      font-size: 35px;
+    }
+
+    &--yellow {
+      color: var(--yellow-color);
+    }
+  }
+
+  @include media-md {
+    &::before {
+      content: "";
+      @include absolute($b: 16px, $l: -48px);
+      background-image: url(./../../../img/purple_cup.png);
+      background-repeat: no-repeat;
+      width: 380px;
+      height: 366px;
+    }
+
+    &::after {
+      content: "";
+      @include absolute($b: 16px, $l: -48px);
+      width: 380px;
+      height: 366px;
+      filter: blur(83.5206px);
+      background: rgba(68, 21, 255, 0.5);
+      border: 1px solid #000000;
+      overflow: visible;
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.btn {
+  &--yellow {
+    color: var(--dark-color);
+    background-color: var(--background-yellow-btn);
+
+    // &:not(.disabled):hover {
+    //   background: rgba($c-white, .05);
+    // }
+
+    // &:not(.disabled):active {
+    //   background: rgba($c-white, .05);
+    //   color: $c-light-gray;
+    // }
+
+    // &:disabled {
+    //   background: $c-disabled-grey;
+    //   color: $c-gray;
+    // }
+  }
+
+  // &--light {
+  //   border: 1px solid rgba(23, 23, 51, 0.3);
+  //   color: $c-text;
+
+  //   &:not(.disabled):hover {
+  //     background:  rgba(23, 23, 51, 0.05);
+  //   }
+
+  //   &:not(.disabled):active {
+  //     background: rgba(23, 23, 51, 0.1);
+  //   }
+
+  //   &:disabled {
+  //     background: transparent;
+  //     color: $c-gray;
+  //   }
+  // }
+
+  // &--blue {
+  //   background: $c-brand;
+  //   color: $c-white;
+
+  //   &:not([disabled]):hover {
+  //     background: $c-hover;
+  //   }
+
+  //   &:not([disabled]):active {
+  //     background: $c-active;
+  //   }
+
+  //   &:disabled {
+  //     background: rgba($c-text, 10%);
+  //     color: $c-gray;
+  //   }
+  // }
+
+  // &--group {
+  //   position: absolute;
+  //   right: 0;
+
+  //   svg {
+  //     width: 32px;
+  //     height: 16px;
+  //     transition: transform $t-fast;
+  //   }
+
+  //   @include hover {
+
+  //     svg {
+  //       transform: translateX(2px);
+  //     }
+  //   }
+  // }
+
+  // &--dropdown {
+  //   width: 192px;
+  //   justify-content: space-between;
+
+  //   svg {
+  //     width: 16px;
+  //     height: 16px;
+  //     transform: rotate(0);
+  //     transition: transform $t-slow;
+  //     margin-left: auto;
+  //   }
+
+  //   &.active {
+  //     margin-top: 32px;
+
+  //     .dropdown-text {
+  //       display: none;
+  //     }
+
+  //     svg {
+  //       transform: rotate(180deg);
+  //     }
+  //   }
+  // }
+
+  // &--tag {
+  //   padding: 8px 10px;
+  // }
+
+  // &--link {
+  //   justify-content: normal;
+  //   white-space: nowrap;
+  // }
+
+  // &--round {
+  //   width: 48px;
+  //   height: 48px;
+  //   padding: 10px;
+  //   border-radius: 300px;
+
+  //   svg {
+  //     width: 18px;
+  //     height: 18px;
+  //   }
+  // }
+}

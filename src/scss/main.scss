@@ -1,0 +1,44 @@
+// базовые подключения
+@import "animations";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/first-screen";
+@import "./components/third-screen";
+@import "./components/fourth-screen";
+@import "./components/fifth-screen";
+@import "./components/sixth-screen";
+@import "./components/seventh-screen";
+@import "./components/section";
+@import "./components/social";
+@import "./components/tags";
+@import "./components/br-title";
+@import "./components/blure-wrap";
+@import "./components/message";
+@import "./components/baner";
+
+//header
+@import "./components/header/header";
+@import "./components/header/logo";
+@import "./components/header/nav";
+@import "./components/header/burger";
+
+//footer
+@import "./components/footer/footer";
+
+//form
+@import "./components/form/form";
+
+//buttons
+@import "components/buttons/btn";
+@import "components/buttons/button-types";
+@import "components/buttons/button-sizes";
+
+//card
+@import "./components/card/card";
+@import "./components/card/card-content";
+@import "./components/card/card-types";
+@import "./components/card/row";

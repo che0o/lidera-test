@@ -1,0 +1,18 @@
+.social {
+  &__link {
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+    background: var(--blue-color);
+    border-radius: 100px;
+    position: relative;
+  }
+
+  &__svg {
+    @include absolute($t: 50%, $l: 50%);
+    transform: translate(-50%, -50%);
+    width: 29px;
+    height: 15px;
+    fill: var(--light-color);
+  }
+}

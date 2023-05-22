@@ -1,0 +1,14 @@
+.fourth-screen {
+  position: relative;
+
+  @include media-md {
+    &::after {
+      content: "";
+      @include absolute($b: -95px, $l: -60px);
+      background-image: url(../../img/star_yellow_min.svg);
+      background-repeat: no-repeat;
+      width: 89px;
+      height: 89px;
+    }
+  }
+}

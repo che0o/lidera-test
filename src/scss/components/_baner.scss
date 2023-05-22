@@ -1,0 +1,38 @@
+.baner {
+  background-color: var(--purple-color);
+  padding: 25px 25px;
+  // margin-top: 68px;
+  border-radius: 25px;
+  position: relative;
+
+  @include media-md {
+    padding: 31px 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  &__text {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    /* or 145% */
+    letter-spacing: 0.5px;
+    max-width: 600px;
+  }
+
+  &__email {
+    color: #ff8562;
+  }
+
+  @include media-md {
+    &::before {
+      content: "";
+      @include absolute($t: -128px, $r: 120px);
+      background-image: url(../../img/airplane.png);
+      background-repeat: no-repeat;
+      width: 286px;
+      height: 269px;
+    }
+  }
+}

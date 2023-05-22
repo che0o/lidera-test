@@ -1,0 +1,14 @@
+.blure-wrap {
+  position: relative;
+
+  &::before {
+    content: "";
+    @include absolute($t: 0, $r: 0, $b: 0, $l: 0);
+    width: 100%;
+    height: 100%;
+    filter: blur(83.5206px);
+    background: rgba(68, 21, 255, 0.5);
+    border: 1px solid #000000;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,30 @@
+.logo {
+  @include flex();
+  width: 54px;
+  height: 47px;
+
+  @include media-md {
+    width: 74px;
+    height: 67px;
+  }
+
+  &__wrap {
+    @include flex();
+  }
+
+  img {
+    margin-right: 12px;
+  }
+
+  &__text {
+    @include font($fw: 700, $fs: 20px, $lh: 2.63, $c: var(--light-color));
+
+    @include media-md {
+      font-size: 30px;
+    }
+  }
+
+  &--footer {
+    margin-bottom: 70px;
+  }
+}

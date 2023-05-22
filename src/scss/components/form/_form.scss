@@ -1,0 +1,189 @@
+.form {
+  @include flex($jc: center);
+  width: 100%;
+  padding-top: 50px;
+
+  @include media-md {
+    padding-top: 150px;
+  }
+
+  &__wrap {
+    @include flex($fd: column);
+    background: var(--purple-color);
+    border-radius: 0px 0px 35px 35px;
+    width: 868px;
+    padding: 70px 35px 35px;
+    position: relative;
+
+    @include media-md {
+      padding: 94px 120px;
+
+      &::before {
+        content: "";
+        @include absolute($t: -278px, $r: -126px);
+        background-image: url(./../../../img/megafon.png);
+        background-repeat: no-repeat;
+        width: 260px;
+        height: 260px;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        @include absolute($t: -278px, $r: -126px);
+        width: 260px;
+        height: 260px;
+        filter: blur(83.5206px);
+        background: rgba(68, 21, 255, 0.5);
+        border: 1px solid #000000;
+        overflow: visible;
+      }
+    }
+  }
+
+  &__header {
+    @include absolute($t: -45px);
+    @include font($fw: 700, $fs: 20px, $lh: 1.16, $ls: -1.5px);
+    width: 100%;
+    text-align: center;
+    background: #1573ff;
+    border-radius: 35px;
+    padding: 25px 0;
+
+    @include media-md {
+      font-size: 50px;
+      padding: 50px 0;
+      top: -128px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  &__input {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include font(
+      $fw: 400,
+      $fs: 16px,
+      $lh: 1,
+      $ls: -1.5px,
+      $c: var(--dark-color)
+    );
+    width: 100%;
+    padding: 15px 12px;
+    background-color: var(--background-yellow-btn);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    @include media-md {
+      font-size: 28px;
+      padding: 25px 22px;
+    }
+
+    &::placeholder {
+      @include font(
+        $fw: 400,
+        $fs: 16px,
+        $lh: 1,
+        $ls: -1.5px,
+        $c: var(--dark-color)
+      );
+
+      @include media-md {
+        font-size: 28px;
+      }
+    }
+
+    &:focus {
+      border-color: var(--blue-color);
+      outline: 4px solid rgba(21, 115, 255, 0.8);
+      outline-offset: -4px;
+    }
+  }
+
+  &__bottom {
+    @include flex($fd: column);
+    position: relative;
+
+    @include media-md {
+      &::before {
+        content: "";
+        @include absolute($b: -251px, $l: -315px);
+        background-image: url(./../../../img/airplane.png);
+        background-repeat: no-repeat;
+        width: 361px;
+        height: 361px;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        @include absolute($b: -264px, $r: -339px);
+        background-image: url(./../../../img/circle.svg);
+        background-repeat: no-repeat;
+        width: 414px;
+        height: 457px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__btn {
+    @include flex($ai: center, $jc: center);
+    @include font(
+      $fw: 700,
+      $fs: 16px,
+      $lh: 2.07,
+      $ls: -1.5px,
+      $c: var(--light-color)
+    );
+    background: var(--blue-color);
+    border: 2px solid var(--yellow-color);
+    border-radius: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 10px 46px;
+    margin-bottom: 50px;
+
+    @include media-md {
+      font-size: 28px;
+      padding: 10px 76px;
+    }
+  }
+
+  input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  input::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  input:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  input:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  input:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  input:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
